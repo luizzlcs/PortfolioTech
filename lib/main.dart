@@ -19,7 +19,6 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Portfólio Tech | Luiz Carlos',
       home: HomePage(
-        // getProfile: GetProfile(ProfileRepositoryImpl()),
       ),
     );
   }
