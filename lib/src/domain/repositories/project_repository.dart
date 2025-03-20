@@ -1,4 +1,4 @@
-import 'package:my_profile/src/domain/entities/project.dart';
+import 'package:portfolio_tech/src/domain/entities/project.dart';
 
 abstract class ProjectRepository {
   Future<List<Project>> getProjects();

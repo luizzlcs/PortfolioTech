@@ -1,5 +1,5 @@
-import 'package:my_profile/src/domain/entities/profile.dart';
-import 'package:my_profile/src/domain/repositories/profile_repository.dart';
+import 'package:portfolio_tech/src/domain/entities/profile.dart';
+import 'package:portfolio_tech/src/domain/repositories/profile_repository.dart';
 
 class GetProfile {
   final ProfileRepository repository;

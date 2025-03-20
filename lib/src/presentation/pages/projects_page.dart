@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:my_profile/locator.dart';
-import 'package:my_profile/src/constants/app_image.dart';
-import 'package:my_profile/src/domain/entities/project.dart';
-import 'package:my_profile/src/domain/repositories/project_repository.dart';
-import 'package:my_profile/src/presentation/widgets/button_link.dart';
+import 'package:portfolio_tech/locator.dart';
+import 'package:portfolio_tech/src/constants/app_image.dart';
+import 'package:portfolio_tech/src/domain/entities/project.dart';
+import 'package:portfolio_tech/src/domain/repositories/project_repository.dart';
+import 'package:portfolio_tech/src/presentation/widgets/button_link.dart';
 
 class ProjectsPage extends StatelessWidget {
   ProjectsPage({super.key});

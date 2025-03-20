@@ -1,6 +1,6 @@
-# my_profile
+# portfolio_tech
 
-A new Flutter project.
+Portfólio Tech | Luiz Carlos
 
 ## Getting Started
 

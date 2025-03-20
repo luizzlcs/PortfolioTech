@@ -1,6 +1,6 @@
-import 'package:my_profile/src/constants/app_image.dart';
-import 'package:my_profile/src/domain/entities/project.dart';
-import 'package:my_profile/src/domain/repositories/project_repository.dart';
+import 'package:portfolio_tech/src/constants/app_image.dart';
+import 'package:portfolio_tech/src/domain/entities/project.dart';
+import 'package:portfolio_tech/src/domain/repositories/project_repository.dart';
 
 class ProjectRepositoryImpl implements ProjectRepository {
   @override

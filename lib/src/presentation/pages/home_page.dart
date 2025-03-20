@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
-import 'package:my_profile/locator.dart';
-import 'package:my_profile/src/constants/app_image.dart';
-import 'package:my_profile/src/constants/app_links.dart';
-import 'package:my_profile/src/domain/entities/profile.dart';
-import 'package:my_profile/src/domain/repositories/profile_repository.dart';
-import 'package:my_profile/src/presentation/pages/experience_page.dart';
-import 'package:my_profile/src/presentation/pages/projects_page.dart';
-import 'package:my_profile/src/presentation/widgets/button_link.dart';
+import 'package:portfolio_tech/locator.dart';
+import 'package:portfolio_tech/src/constants/app_image.dart';
+import 'package:portfolio_tech/src/constants/app_links.dart';
+import 'package:portfolio_tech/src/domain/entities/profile.dart';
+import 'package:portfolio_tech/src/domain/repositories/profile_repository.dart';
+import 'package:portfolio_tech/src/presentation/pages/experience_page.dart';
+import 'package:portfolio_tech/src/presentation/pages/projects_page.dart';
+import 'package:portfolio_tech/src/presentation/widgets/button_link.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});

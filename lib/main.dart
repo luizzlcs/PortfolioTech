@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
-import 'package:my_profile/locator.dart';
-import 'package:my_profile/src/presentation/pages/home_page.dart';
+import 'package:portfolio_tech/locator.dart';
+import 'package:portfolio_tech/src/presentation/pages/home_page.dart';
 
 void main() {
   setupLocator();
@@ -16,6 +16,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Portfólio Tech | Luiz Carlos',
       home: HomePage(
         // getProfile: GetProfile(ProfileRepositoryImpl()),
