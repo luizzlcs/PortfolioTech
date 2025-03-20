@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:my_profile/src/domain/repositories/profile_repository_impl.dart';
-import 'package:my_profile/src/domain/usecases/get_profile.dart';
+import 'package:flutter_native_splash/flutter_native_splash.dart';
+import 'package:my_profile/locator.dart';
 import 'package:my_profile/src/presentation/pages/home_page.dart';
 
 void main() {
+  setupLocator();
+  WidgetsBinding widgetsBinding = WidgetsFlutterBinding.ensureInitialized();
+  FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
   runApp(MyApp());
 }
 
@@ -13,9 +16,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'May Profile',
+      title: 'Portfólio Tech | Luiz Carlos',
       home: HomePage(
-        getProfile: GetProfile(ProfileRepositoryImpl()),
+        // getProfile: GetProfile(ProfileRepositoryImpl()),
       ),
     );
   }
