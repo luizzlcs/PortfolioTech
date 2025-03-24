@@ -11,7 +11,7 @@ class ProjectRepositoryImpl implements ProjectRepository {
       Project(
         name: "DSCommerce - Java",
         description:
-            "A DSCommerce API (caso de estudo) é o núcleo que suporta toda a operação do sistema, atendendo tanto administradores quanto clientes.",
+            "Oferece recursos como Autenticação e segurança: Utilizando OAuth2, Resource Server, JWT e BCrypt, garantindo um ambiente seguro para todos os usuários, produtos e categorias, além de processamento de pedidos, integrando bancos de dados H2.",
         type: "Back-end",
         imageUrl: AppImage.dsCommerce,
         siteUrl: "",
@@ -20,7 +20,7 @@ class ProjectRepositoryImpl implements ProjectRepository {
       Project(
         name: "DSEvent - Java",
         description:
-            "Sistema desenvolvido para gerenciar participantes e atividades de eventos acadêmicos. Permite o cadastro de palestras, cursos e oficinas, com descrição, preço e horários detalhados.",
+            "Projeto com Spring Boot com Java e banco de dados H2, e implementando um modelo conceitual conforme especificação a seguir. Além disso, contém um seeding da base de dados conforme diagrama de objetos que segue.",
         type: "Back-end",
         imageUrl: AppImage.dsEvent,
         siteUrl: "",
@@ -29,7 +29,7 @@ class ProjectRepositoryImpl implements ProjectRepository {
       Project(
         name: "DSClient - Java",
         description:
-            "Projeto Spring Boot contendo um CRUD completo de web services REST.",
+            "Projeto Spring Boot contendo um CRUD completo de web services REST para acessa um recurso de clientes, contendo as cinco operações básicas: Busca paginada de recursos, Busca de recurso por id, Inserir novo recurso, Atualizar recurso, Deletar recurso.",
         type: "Back-end",
         imageUrl: AppImage.dsClient,
         siteUrl: "",
@@ -38,7 +38,7 @@ class ProjectRepositoryImpl implements ProjectRepository {
       Project(
         name: "Diretório de links",
         description:
-            "Aplicativo web em Flutt er que oferece um diretório centralizado de links, com compartilhamento personalizado dos link e análise de visitas..",
+            "Diretório centralizador de links, conexão com API do Google Sheets, roteamento direto para páginas institucionais, menu de compartilhamento personalizado com opções de copiar e compartilhar, sistema de mensagens personalizadas para cada link, Rastreamento de análises de acesso (visualizações de página e cliques em botões) Integração com Google Sheets para armazenamento de dados, Gerenciamento de variáveis de ambiente para armazenamento seguro de credenciais.",
         type: "Front-end",
         imageUrl: AppImage.diretorioDeLinks,
         siteUrl: "https://adventistasc.netlify.app/",
@@ -47,7 +47,7 @@ class ProjectRepositoryImpl implements ProjectRepository {
       Project(
         name: "Campo minado",
         description:
-            'O aplicativo Flutter "Campo Minado" é um jogo de lógica onde os jogadores devem identificar minas em um campo sem detoná-las.',
+            'O aplicativo possui Tabuleiro Interativo: Campos clicáveis para revelar se há minas, Toque longo para marcar/desmarcar suspeitas de minas, Geração aleatória de minas no início do jogo, Regras do Jogo:Ao abrir um campo com mina, o jogo termina (derrota), Se todos os campos sem minas forem abertos, o jogador vence, Campos adjacentes mostram o número de minas próximas, Ícones intuitivos (💣 para minas, 🚩 para marcações), Feedback visual ao vencer ou perder.',
         type: "Front-end",
         imageUrl: AppImage.campoMinado,
         siteUrl: "https://campominado-lcs.netlify.app/",
@@ -56,7 +56,7 @@ class ProjectRepositoryImpl implements ProjectRepository {
       Project(
         name: "Seven Manager",
         description:
-            "Aplicativo ainda em desenvolvimento, visa atender as princiapais rotinas administrativas para igrejas Adventistas locais ",
+            "Login com e-mail e senha, Registro de novos usuários, Validação de campos em tempo real, Gerenciamento de sessão de usuário, Edição de dados pessoais, Upload de foto de perfil, Navegação Modular com Rotas nomeadas, Transições customizadas entre telas.",
         type: "Front-end",
         imageUrl: AppImage.sevenManager,
         siteUrl: "https://sevenmaneger.netlify.app",
@@ -65,7 +65,7 @@ class ProjectRepositoryImpl implements ProjectRepository {
       Project(
         name: "Educativa",
         description:
-            "Educativa é um sistema desenvolvido em Flutter para facilitar a gestão de cursos, alunos e matrículas.",
+            "Gerenciamento de Estado com signals_flutter, Injeção de Dependência com flutter_getit, Validação e Formatação de Dados utilizando os pacotes validatorless e brasil_fields, componentização de código possibilitando que o mesmo código base seja utilizado para diferentes ambientes.",
         type: "Front-end",
         imageUrl: AppImage.sincofarma,
         siteUrl: "https://educativa.netlify.app/",
@@ -74,7 +74,7 @@ class ProjectRepositoryImpl implements ProjectRepository {
       Project(
         name: "Administrativo IASD",
         description:
-            "Cadastra todas os departamentos e ativides dos departamentos da IASD e gerencia as rotinas.",
+            "O projeto adota uma estrutura modular, separando modelo, visualizações, serviços e tratamento de exceções para facilitar a manutenção e escalabilidade. Integra Firebase para autenticação e operações com Firestore, permitindo gerenciamento de dados em tempo real. As interfaces são organizadas em módulos específicos (dashboard, login, departamentos e secretaria), formando um painel administrativo completo.",
         type: "Front-end",
         imageUrl: AppImage.administrativoIASD,
         siteUrl: "https://myadmin7.netlify.app/",
@@ -83,7 +83,7 @@ class ProjectRepositoryImpl implements ProjectRepository {
       Project(
         name: "Calculadora",
         description:
-            "O aplicativo de calculadora desenvolvido em Flutter permite aos usuários realizar operações aritméticas básicas, como adição, subtração, multiplicação e divisão.",
+            "O projeto é um aplicativo Flutter que implementa uma calculadora básica com operações aritméticas.A estrutura do código é modular, dividindo a lógica e a interface em widgets customizados para display e botões. Utiliza stateful widgets para gerenciar e atualizar dinamicamente os cálculos conforme o usuário interage. A interface é simples e responsiva, priorizando a usabilidade e clareza na apresentação dos dados.",
         type: "Front-end",
         imageUrl: AppImage.calculadora,
         siteUrl: "https://calculadora-lcs.netlify.app/",
