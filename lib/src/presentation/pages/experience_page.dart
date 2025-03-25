@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class ExperiencePage extends StatelessWidget {
   const ExperiencePage({super.key});
@@ -21,7 +22,7 @@ class ExperiencePage extends StatelessWidget {
       body: Center(
         child: Container(
           constraints: const BoxConstraints(maxWidth: 800, minWidth: 250),
-        
+
           child: SingleChildScrollView(
             padding: EdgeInsets.all(16),
             child: Column(
@@ -57,33 +58,56 @@ class ExperiencePage extends StatelessWidget {
                   ],
                   [],
                 ),
-        
+
                 // Seção de Formação
                 SizedBox(height: 24),
-        
+
                 // Seção de Cursos e Certificações
                 _buildSectionTitle("Cursos e Certificações", Icons.article),
                 _buildCourseItem(
-                  "Java Backend",
-                  "DevSuperior com professor Nélio Alves",
-                  "2024",
+                  url: 'https://devsuperior.club/c/5-5711',
+                  course: "Java Backend",
+                  institution: "DevSuperior com professor Nélio Alves",
+                  year: "2024",
                 ),
-                _buildCourseItem("JavaScript", "Hashtag", "2024"),
-                _buildCourseItem("Python", "Hashtag", "2023"),
                 _buildCourseItem(
-                  "Flutter Master Class",
-                  "Flutterando",
-                  "2021-2022",
+                  course: "JavaScript",
+                  institution: "Hashtag",
+                  year: "2024",
                 ),
-                _buildCourseItem("Dart/Flutter", "Academia do Flutter", "2021"),
                 _buildCourseItem(
-                  "Dart e Flutter",
-                  "Professor Leonardo Moura Brandão",
-                  "2021",
+                  course: "Python",
+                  institution: "Hashtag",
+                  year: "2023",
                 ),
-                _buildCourseItem("Programador Java", "SENAC-RN", "2017"),
+                _buildCourseItem(
+                  url:
+                      'https://ll-app-certificates.s3.sa-east-1.amazonaws.com/89685a45-ad9c-47ab-86e8-31b9bd4bd70d.png',
+                  course: "Flutter Master Class",
+                  institution: "Flutterando",
+                  year: "2021-2022",
+                ),
+                _buildCourseItem(
+                  course: "Dart Week",
+                  institution: "Academia do Flutter",
+                  year: "2023",
+                  url:
+                      'https://file.notion.so/f/f/a3adf51a-bad3-4c29-890a-100bf6e25e65/dc7bf144-c553-49b0-83f1-6785d8a330b8/CertificadoDartWeek11.pdf?table=block&id=1c1e2e57-f164-800b-bf84-ecc429b4a9e3&spaceId=a3adf51a-bad3-4c29-890a-100bf6e25e65&expirationTimestamp=1742940000000&signature=FIHHNtDkSW5VE5HbttSRLc3OF1PoM0ImFKbqOF1G00Q&downloadName=CertificadoDartWeek11.pdf',
+                ),
+                _buildCourseItem(
+                  course: "Dart e Flutter",
+                  institution: "Professor Leonardo Moura Brandão",
+                  year: "2021",
+                ),
+                _buildCourseItem(
+                  course: "Programador Java",
+                  institution: "SENAC-RN",
+                  year: "2017",
+                  url:
+                      'https://file.notion.so/f/f/a3adf51a-bad3-4c29-890a-100bf6e25e65/22ae227f-fb2b-4492-9864-95600e17d343/Programador_Java.pdf?table=block&id=1b2e2e57-f164-80d9-92a1-e0594cb5a637&spaceId=a3adf51a-bad3-4c29-890a-100bf6e25e65&expirationTimestamp=1742940000000&signature=TvDQkze6SnLLB95zd1THbEyL_shRVqLBwiU63_TPByQ&downloadName=Programador+Java.pdf',
+                ),
                 SizedBox(height: 24),
-        
+
                 // Seção de Competências Técnicas
                 _buildSectionTitle("Competências Técnicas", Icons.code),
                 _buildSkillItem("Back-End", [
@@ -106,7 +130,7 @@ class ExperiencePage extends StatelessWidget {
                   "Firebase (Firestore, Storage, Authentication)",
                 ]),
                 SizedBox(height: 24),
-        
+
                 // Seção de Idiomas
                 _buildSectionTitle("Idiomas", Icons.language),
                 _buildLanguageItem("Português", "Nativo"),
@@ -196,16 +220,15 @@ class ExperiencePage extends StatelessWidget {
                 style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
               ),
             ),
-            ...technologies
-                .map(
-                  (tech) => Padding(
-                    padding: EdgeInsets.only(left: 90, bottom: 4),
-                    child: SelectableText(
-                      "- $tech",
-                      style: TextStyle(fontSize: 16),
-                    ),
-                  ),
+            ...technologies.map(
+              (tech) => Padding(
+                padding: EdgeInsets.only(left: 90, bottom: 4),
+                child: SelectableText(
+                  "- $tech",
+                  style: TextStyle(fontSize: 16),
                 ),
+              ),
+            ),
           ],
         ],
       ),
@@ -239,16 +262,45 @@ class ExperiencePage extends StatelessWidget {
   // }
 
   // Função para criar itens de cursos e certificações
-  Widget _buildCourseItem(String course, String institution, String year) {
+
+  Widget _buildCourseItem({
+    required String course,
+    required String institution,
+    required String year,
+    String? url,
+  }) {
     return Padding(
       padding: EdgeInsets.only(left: 50),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          SelectableText(
-            course,
-            style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-          ),
+          url != null
+              ? GestureDetector(
+                onTap: () async {
+                  if (await canLaunchUrl(Uri.parse(url))) {
+                    await launchUrl(
+                      Uri.parse(url),
+                      mode: LaunchMode.externalApplication,
+                    );
+                  }
+                },
+                child: MouseRegion(
+                  cursor: SystemMouseCursors.click,
+                  child: Text(
+                    course,
+                    style: TextStyle(
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.blue,
+                      decoration: TextDecoration.underline,
+                    ),
+                  ),
+                ),
+              )
+              : SelectableText(
+                course,
+                style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+              ),
           SizedBox(height: 4),
           SelectableText(
             "$institution - $year",
