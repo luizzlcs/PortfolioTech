@@ -37,7 +37,7 @@ class ExperiencePage extends StatelessWidget {
                     functions: [
                       ExperienceFunction(
                         title: 'Desenvolvedor Mobile e Web',
-                        period: '2021 - 2025',
+                        period: '06/2022 - 02/2025',
                         descriptions: [
                           "Desenvolvimento e manutenção de aplicativos mobile multiplataforma em Flutter, aplicando Clean Architecture e integração com Firebase.",
                           "Desenvolvimento de script automatizado em Node.js para extração e processamento de dados do Firebase, gerando relatórios estruturados em formato JSON para análise e tomada de decisão.",
@@ -76,7 +76,7 @@ class ExperiencePage extends StatelessWidget {
                     functions: [
                       ExperienceFunction(
                         title: 'Gerente Administrativo Financeiro',
-                        period: '2019 - 2021',
+                        period: '2019 - 12/2021',
                         descriptions: [
                           "Análises de dados:",
                           "Desenvolvimento de consultas SQL, relatórios e automação de processos no Microsoft Access com VBA.",
@@ -95,9 +95,77 @@ class ExperiencePage extends StatelessWidget {
                       ),
                       ExperienceFunction(
                         title: 'Auxiliar Financeiro',
-                        period: '2010 - 2015',
+                        period: '06/2010 - 2015',
                         descriptions: [
                           'Gerenciamento de contas a pagar e a receber, conciliação bancária, preparação de relatórios financeiros e suporte em obrigações fiscais.',
+                        ],
+                        technologies: [],
+                      ),
+                    ],
+                  ),
+                ),
+                _buildCompanyExperienceItem(
+                  CompanyExperience(
+                    company: 'Data Sul - Informática)',
+                    functions: [
+                      ExperienceFunction(
+                        title: 'Instrutor de informática',
+                        period: '02/2009 - 05/2010',
+                        descriptions: [
+                          'Atuei no treinamento de alunos em sistemas operacionais (Windows, Linux), pacote Office (Word, Excel, PowerPoint, Access), softwares gráficos (CorelDraw, Illustrator) e fundamentos do desenvolvimento web (HTML e CSS).',
+                        ],
+                        technologies: [],
+                      ),
+                    ],
+                  ),
+                ),
+                _buildCompanyExperienceItem(
+                  CompanyExperience(
+                    company: 'Nacional Soluções Financeiras)',
+                    functions: [
+                      ExperienceFunction(
+                        title: 'Gestor',
+                        period: '05/2006 - 01/2008',
+                        descriptions: [
+                          'Gestão Estratégica e Operacional: Responsável pela administração completa das operações de empréstimos consignados',
+                          'Treinamento e Implantação de Propostas',
+                          'Análise de Crédito e Gerenciamento de Risco',
+                          'Liderança e Desenvolvimento de Equipe',
+                          'Parcerias Estratégicas e Expansão de Negócios',
+                        ],
+                        technologies: [],
+                      ),
+                    ],
+                  ),
+                ),
+                _buildCompanyExperienceItem(
+                  CompanyExperience(
+                    company: 'Serviço Educacional Lar e Saúde / CPB)',
+                    functions: [
+                      ExperienceFunction(
+                        title: 'Colportor',
+                        period: '05/2003 - 01/2006',
+                        descriptions: [
+                          'Responsável pela divulgação e venda de literaturas com enfoque em educação, saúde e espiritualidade, contribuindo para a promoção dos valores e ensinamentos da Igreja Adventista.',
+                          'Desenvolvi habilidades de comunicação e relacionamento interpessoal, ampliando o alcance dos conteúdos e fortalecendo a missão institucional.',
+                        ],
+                        technologies: [],
+                      ),
+                    ],
+                  ),
+                ),
+
+                _buildCompanyExperienceItem(
+                  CompanyExperience(
+                    company: 'Veklas Informática',
+                    functions: [
+                      ExperienceFunction(
+                        title: 'Instrutor de Informática',
+                        period: '2001 - 04/2003',
+                        descriptions: [
+                          'Ministrei aulas de informática para crianças da Educação Infantil ao Ensino Fundamental II (antiga 8ª Série).',
+                          'Desenvolvi e apliquei atividades educativas interativas para promover o aprendizado de habilidades tecnológicas essenciais.',
+                          'Adaptei os conteúdos de acordo com as faixas etárias, promovendo a inclusão digital desde as primeiras séries até o Ensino Fundamental.',
                         ],
                         technologies: [],
                       ),

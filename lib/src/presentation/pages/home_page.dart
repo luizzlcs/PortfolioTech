@@ -153,6 +153,12 @@ class HomeContent extends StatelessWidget {
                     useIcon: true,
                     whidth: 40,
                   ),
+                  ButtonLink(
+                    image: AppImage.curriculo,
+                    url: AppLinks.curriculo,
+                    useIcon: true,
+                    whidth: 40,
+                  ),
                 ],
               ),
             ],

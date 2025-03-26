@@ -9,6 +9,7 @@ class ButtonLink extends StatelessWidget {
     required this.useIcon,
     required this.whidth,
      this.icon,
+     required this.descriptionButton,
   });
 
   final String? image;
@@ -16,10 +17,12 @@ class ButtonLink extends StatelessWidget {
   final bool useIcon; // Use true para usar um assets e false para usar um iconData
   final double whidth;
   final IconData? icon;
+  final String descriptionButton;
 
   @override
   Widget build(BuildContext context) {
     return IconButton(
+      tooltip: '',
       icon: useIcon? Image.asset(image!, width: whidth): Icon(icon, weight: whidth,),
       onPressed: () async {
         final uri = Uri.parse(url);

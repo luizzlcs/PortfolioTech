@@ -13,5 +13,6 @@ abstract class AppImage{
   static const String dsCommerce = 'assets/images/dscommerce.png';
   static const String dsEvent = 'assets/images/dsevent.png';
   static const String dsClient = 'assets/images/dsclient.png';
+  static const String curriculo = 'assets/images/curriculo.png';
 
 }
