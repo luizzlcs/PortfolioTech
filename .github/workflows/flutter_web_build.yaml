@@ -15,7 +15,7 @@ jobs:
     - name: Configure o Flutter
       uses: subosito/flutter-action@v2
       with:
-        flutter-version: '3.29.0-1.0.pre.352'  # substitua pela versão do seu projeto, se quiser
+        flutter-version: '3.29.2'  # substitua pela versão do seu projeto, se quiser
 
     - name: Pub get
       run: flutter pub get
