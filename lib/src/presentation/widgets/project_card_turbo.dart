@@ -98,6 +98,7 @@ class ProjectCardTurbo extends StatelessWidget {
                       Visibility(
                         visible: project.siteUrl.isNotEmpty,
                         child: ButtonLink(
+                          descriptionButton: project.description,
                           icon: Icons.link_sharp,
                           url: project.siteUrl,
                           useIcon: false,
@@ -106,6 +107,7 @@ class ProjectCardTurbo extends StatelessWidget {
                       ),
                       // SizedBox(width: 8), // Espaçamento entre os botões
                       ButtonLink(
+                        descriptionButton: project.description,
                         url: project.githubUrl,
                         useIcon: true,
                         image: AppImage.gitHub,

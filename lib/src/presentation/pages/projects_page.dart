@@ -181,6 +181,7 @@ class ProjectCard extends StatelessWidget {
                   Visibility(
                     visible: project.siteUrl.isNotEmpty,
                     child: ButtonLink(
+                      descriptionButton: 'App Web',
                       icon: Icons.link_sharp,
                       url: project.siteUrl,
                       useIcon: false,
@@ -189,6 +190,7 @@ class ProjectCard extends StatelessWidget {
                   ),
                   // SizedBox(width: 8), // Espaçamento entre os botões
                   ButtonLink(
+                    descriptionButton: 'Projeto no GitHub',
                     url: project.githubUrl,
                     useIcon: true,
                     image: AppImage.gitHub,

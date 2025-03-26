@@ -127,6 +127,7 @@ class HomeContent extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   ButtonLink(
+                    descriptionButton: 'E-mail',
                     image: AppImage.email,
                     url: AppLinks.email,
                     useIcon: true,
@@ -134,6 +135,7 @@ class HomeContent extends StatelessWidget {
                   ),
                   SizedBox(width: 10),
                   ButtonLink(
+                    descriptionButton: 'GitHub',
                     image: AppImage.gitHub,
                     url: AppLinks.gitHub,
                     useIcon: true,
@@ -141,6 +143,7 @@ class HomeContent extends StatelessWidget {
                   ),
                   SizedBox(width: 10),
                   ButtonLink(
+                    descriptionButton: 'LinkedIn',
                     image: AppImage.linkedin,
                     url: AppLinks.linkedin,
                     useIcon: true,
@@ -148,12 +151,14 @@ class HomeContent extends StatelessWidget {
                   ),
                   SizedBox(width: 10),
                   ButtonLink(
+                    descriptionButton: 'WhastApp',
                     image: AppImage.whatsApp,
                     url: AppLinks.whatsApp,
                     useIcon: true,
                     whidth: 40,
                   ),
                   ButtonLink(
+                    descriptionButton: 'Currículo',
                     image: AppImage.curriculo,
                     url: AppLinks.curriculo,
                     useIcon: true,
