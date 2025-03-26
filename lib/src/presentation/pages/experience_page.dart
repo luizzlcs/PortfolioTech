@@ -72,7 +72,7 @@ class ExperiencePage extends StatelessWidget {
                 // ),
                 _buildCompanyExperienceItem(
                   CompanyExperience(
-                    company: 'Dental Med Center',
+                    company: 'Associção Brasileira de Assistência Odontológica de Grupo - Dental Med Center',
                     functions: [
                       ExperienceFunction(
                         title: 'Gerente Administrativo Financeiro',
