@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:portfolio_tech/src/domain/entities/experience_function.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class ExperiencePage extends StatelessWidget {
@@ -30,33 +31,78 @@ class ExperiencePage extends StatelessWidget {
               children: [
                 // Seção de Experiência Profissional
                 _buildSectionTitle("Experiência Profissional", Icons.work),
-                _buildExperienceItem(
-                  "Desenvolvedor Mobile e Web",
-                  "Ponto Care Franchising e Consultoria",
-                  "2021 - Atual",
-                  [
-                    "Desenvolvimento e manutenção de aplicativos mobile multiplataforma em Flutter, aplicando Clean Architecture e integração com Firebase.",
-                    "Desenvolvimento de script automatizado em Node.js para extração e processamento de dados do Firebase, gerando relatórios estruturados em formato JSON para análise e tomada de decisão.",
-                    "Implementação de novas funcionalidades conforme requisitos dos clientes.",
-                    "Levantamento e análise de requisitos técnicos em reuniões com stakeholders, traduzindo necessidades de negócio em especificações de desenvolvimento e priorizando funcionalidades para entrega de soluções personalizadas.",
-                  ],
-                  [
-                    "Node.js, Dart, Flutter, Firebase (Firestore, Storage, Authentication)",
-                    "Gerenciadores de estado (MobX, ValueNotifier, ChangeNotifier)",
-                    "Injeção de dependência (Get It)",
-                  ],
+                _buildCompanyExperienceItem(
+                  CompanyExperience(
+                    company: 'Ponto Care Franchising e Consultoria',
+                    functions: [
+                      ExperienceFunction(
+                        title: 'Desenvolvedor Mobile e Web',
+                        period: '2021 - 2025',
+                        descriptions: [
+                          "Desenvolvimento e manutenção de aplicativos mobile multiplataforma em Flutter, aplicando Clean Architecture e integração com Firebase.",
+                          "Desenvolvimento de script automatizado em Node.js para extração e processamento de dados do Firebase, gerando relatórios estruturados em formato JSON para análise e tomada de decisão.",
+                          "Implementação de novas funcionalidades conforme requisitos dos clientes.",
+                          "Levantamento e análise de requisitos técnicos em reuniões com stakeholders, traduzindo necessidades de negócio em especificações de desenvolvimento e priorizando funcionalidades para entrega de soluções personalizadas.",
+                        ],
+                        technologies: [
+                          "Node.js, Dart, Flutter, Firebase (Firestore, Storage, Authentication)",
+                          "Gerenciadores de estado (MobX, ValueNotifier, ChangeNotifier)",
+                          "Injeção de dependência (Get It)",
+                        ],
+                      ),
+                    ],
+                  ),
                 ),
-                _buildExperienceItem(
-                  "Gerente Administrativo Financeiro",
-                  "Dental Med Center",
-                  "2010 - 2020",
-                  [
-                    "Análises de dados:",
-                    "Desenvolvimento de consultas SQL, relatórios e automação de processos no Microsoft Access com VBA.",
-                    "Análise de dados e criação de dashboards interativos no Microsoft Excel, utilizando Tabelas Dinâmicas, Power Query e Power Pivot.",
-                    "Planejamento e controle orçamentário, Gestão do fluxo de caixa, Faturamento e cobrança, relacionamento com bancos e fornecedores, gestão de repasses, atendimento à ANS, gestão de contratos, Gerenciamento de riscos e auditorias, aprimoramento de processos internos.",
-                  ],
-                  [],
+
+                // _buildExperienceItem(
+                //   "Desenvolvedor Mobile e Web",
+                //   "Ponto Care Franchising e Consultoria",
+                //   "2021 - Atual",
+                //   [
+                //     "Desenvolvimento e manutenção de aplicativos mobile multiplataforma em Flutter, aplicando Clean Architecture e integração com Firebase.",
+                //     "Desenvolvimento de script automatizado em Node.js para extração e processamento de dados do Firebase, gerando relatórios estruturados em formato JSON para análise e tomada de decisão.",
+                //     "Implementação de novas funcionalidades conforme requisitos dos clientes.",
+                //     "Levantamento e análise de requisitos técnicos em reuniões com stakeholders, traduzindo necessidades de negócio em especificações de desenvolvimento e priorizando funcionalidades para entrega de soluções personalizadas.",
+                //   ],
+                //   [
+                //     "Node.js, Dart, Flutter, Firebase (Firestore, Storage, Authentication)",
+                //     "Gerenciadores de estado (MobX, ValueNotifier, ChangeNotifier)",
+                //     "Injeção de dependência (Get It)",
+                //   ],
+                // ),
+                _buildCompanyExperienceItem(
+                  CompanyExperience(
+                    company: 'Dental Med Center',
+                    functions: [
+                      ExperienceFunction(
+                        title: 'Gerente Administrativo Financeiro',
+                        period: '2019 - 2021',
+                        descriptions: [
+                          "Análises de dados:",
+                          "Desenvolvimento de consultas SQL, relatórios e automação de processos no Microsoft Access com VBA.",
+                          "Análise de dados e criação de dashboards interativos no Microsoft Excel, utilizando Tabelas Dinâmicas, Power Query e Power Pivot.",
+                          "Planejamento e controle orçamentário, Gestão do fluxo de caixa, Faturamento e cobrança, relacionamento com bancos e fornecedores, gestão de repasses, atendimento à ANS, gestão de contratos, Gerenciamento de riscos e auditorias, aprimoramento de processos internos.",
+                        ],
+                        technologies: [],
+                      ),
+                      ExperienceFunction(
+                        title: 'Supervisor Tesouraria',
+                        period: '2016 - 2018',
+                        descriptions: [
+                          'Coordenação da equipe de tesouraria, treinamento e desenvolvimento de colaboradores, definição de metas individuais e coletivas, avaliação de desempenho, distribuição e acompanhamento de atividades, acompanhamento de indicadores, supervisão de pagamentos e recebimentos, relacionamento Bancário e Financeiro.',
+                        ],
+                        technologies: [],
+                      ),
+                      ExperienceFunction(
+                        title: 'Auxiliar Financeiro',
+                        period: '2010 - 2015',
+                        descriptions: [
+                          'Gerenciamento de contas a pagar e a receber, conciliação bancária, preparação de relatórios financeiros e suporte em obrigações fiscais.',
+                        ],
+                        technologies: [],
+                      ),
+                    ],
+                  ),
                 ),
 
                 // Seção de Formação
@@ -134,7 +180,7 @@ class ExperiencePage extends StatelessWidget {
                 // Seção de Idiomas
                 _buildSectionTitle("Idiomas", Icons.language),
                 _buildLanguageItem("Português", "Nativo"),
-                _buildLanguageItem("Inglês", "A2"),
+                _buildLanguageItem("Inglês", "B1"),
               ],
             ),
           ),
@@ -165,71 +211,68 @@ class ExperiencePage extends StatelessWidget {
   }
 
   // Função para criar itens de experiência profissional
-  Widget _buildExperienceItem(
-    String title,
-    String company,
-    String period,
-    List<String> descriptions,
-    List<String> technologies,
-  ) {
+  Widget _buildCompanyExperienceItem(CompanyExperience experience) {
     return Padding(
-      padding: EdgeInsets.only(bottom: 16),
+      padding: const EdgeInsets.only(bottom: 10),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Padding(
-            padding: const EdgeInsets.only(left: 50),
-            child: SelectableText(
-              title,
-              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-            ),
+          SelectableText(
+            experience.company,
+            style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
           ),
-          SizedBox(height: 4),
-          Padding(
-            padding: const EdgeInsets.only(left: 70),
-            child: SelectableText(
-              company,
-              style: TextStyle(fontSize: 18, color: Colors.grey[700]),
-            ),
-          ),
-          SizedBox(height: 4),
-          Padding(
-            padding: const EdgeInsets.only(left: 90),
-            child: SelectableText(
-              period,
-              style: TextStyle(fontSize: 16, color: Colors.grey[600]),
-            ),
-          ),
-          SizedBox(height: 8),
-
-          ...descriptions.map(
-            (description) => Padding(
-              padding: EdgeInsets.only(left: 90, bottom: 8),
-              child: SelectableText(
-                "- $description",
-                style: TextStyle(fontSize: 16),
+          SizedBox(height: 3),
+          ...experience.functions.map(
+            (func) => Padding(
+              padding: const EdgeInsets.only(left: 20, bottom: 8),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  SelectableText(
+                    func.title,
+                    style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                  ),
+                  SizedBox(height: 4),
+                  SelectableText(
+                    func.period,
+                    style: TextStyle(fontSize: 16, color: Colors.grey[700]),
+                  ),
+                  SizedBox(height: 8),
+                  ...func.descriptions.map(
+                    (desc) => Padding(
+                      padding: const EdgeInsets.only(left: 20, bottom: 4),
+                      child: SelectableText(
+                        "◾ $desc",
+                        style: TextStyle(fontSize: 16),
+                      ),
+                    ),
+                  ),
+                  if (func.technologies.isNotEmpty) ...[
+                    SizedBox(height: 8),
+                    Padding(
+                      padding: const EdgeInsets.only(left: 20),
+                      child: SelectableText(
+                        "Tecnologias utilizadas:",
+                        style: TextStyle(
+                          fontSize: 16,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ),
+                    ...func.technologies.map(
+                      (tech) => Padding(
+                        padding: const EdgeInsets.only(left: 40, bottom: 4),
+                        child: SelectableText(
+                          "▪️ $tech",
+                          style: TextStyle(fontSize: 16),
+                        ),
+                      ),
+                    ),
+                  ],
+                ],
               ),
             ),
           ),
-          if (technologies.isNotEmpty) ...[
-            SizedBox(height: 8),
-            Padding(
-              padding: const EdgeInsets.only(left: 90),
-              child: SelectableText(
-                "Tecnologias utilizadas:",
-                style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
-              ),
-            ),
-            ...technologies.map(
-              (tech) => Padding(
-                padding: EdgeInsets.only(left: 90, bottom: 4),
-                child: SelectableText(
-                  "- $tech",
-                  style: TextStyle(fontSize: 16),
-                ),
-              ),
-            ),
-          ],
         ],
       ),
     );
@@ -303,7 +346,7 @@ class ExperiencePage extends StatelessWidget {
               ),
           SizedBox(height: 4),
           SelectableText(
-            "$institution - $year",
+            "▪️$institution - $year",
             style: TextStyle(fontSize: 16, color: Colors.grey[700]),
           ),
         ],
@@ -326,7 +369,7 @@ class ExperiencePage extends StatelessWidget {
           ...skills.map(
             (skill) => Padding(
               padding: EdgeInsets.only(bottom: 4),
-              child: SelectableText("- $skill", style: TextStyle(fontSize: 16)),
+              child: SelectableText("◾ $skill", style: TextStyle(fontSize: 16)),
             ),
           ),
         ],

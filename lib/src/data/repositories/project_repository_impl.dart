@@ -5,8 +5,7 @@ import 'package:portfolio_tech/src/domain/repositories/project_repository.dart';
 class ProjectRepositoryImpl implements ProjectRepository {
   @override
   Future<List<Project>> getProjects() async {
-    // Simula uma chamada de API ou banco de dados
-    await Future.delayed(Duration(seconds: 1)); // Simula um delay de rede
+    // await Future.delayed(Duration(seconds: 1)); 
     return [
       Project(
         name: "DSCommerce - Java",
