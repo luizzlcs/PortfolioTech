@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:portfolio_tech/src/constants/app_links.dart';
 import 'package:portfolio_tech/src/domain/entities/experience_function.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -106,7 +107,7 @@ class ExperiencePage extends StatelessWidget {
                 ),
                 _buildCompanyExperienceItem(
                   CompanyExperience(
-                    company: 'Data Sul - Informática)',
+                    company: 'Data Sul Informática',
                     functions: [
                       ExperienceFunction(
                         title: 'Instrutor de informática',
@@ -179,7 +180,7 @@ class ExperiencePage extends StatelessWidget {
                 // Seção de Cursos e Certificações
                 _buildSectionTitle("Cursos e Certificações", Icons.article),
                 _buildCourseItem(
-                  url: 'https://devsuperior.club/c/5-5711',
+                  url: AppLinks.devSuperiorJavaSpringProfessional,
                   course: "Java Backend",
                   institution: "DevSuperior com professor Nélio Alves",
                   year: "2024",
@@ -195,8 +196,7 @@ class ExperiencePage extends StatelessWidget {
                   year: "2023",
                 ),
                 _buildCourseItem(
-                  url:
-                      'https://ll-app-certificates.s3.sa-east-1.amazonaws.com/89685a45-ad9c-47ab-86e8-31b9bd4bd70d.png',
+                  url:AppLinks.flutterMasterClass,
                   course: "Flutter Master Class",
                   institution: "Flutterando",
                   year: "2021-2022",
@@ -205,8 +205,7 @@ class ExperiencePage extends StatelessWidget {
                   course: "Dart Week",
                   institution: "Academia do Flutter",
                   year: "2023",
-                  url:
-                      'https://file.notion.so/f/f/a3adf51a-bad3-4c29-890a-100bf6e25e65/dc7bf144-c553-49b0-83f1-6785d8a330b8/CertificadoDartWeek11.pdf?table=block&id=1c1e2e57-f164-800b-bf84-ecc429b4a9e3&spaceId=a3adf51a-bad3-4c29-890a-100bf6e25e65&expirationTimestamp=1742940000000&signature=FIHHNtDkSW5VE5HbttSRLc3OF1PoM0ImFKbqOF1G00Q&downloadName=CertificadoDartWeek11.pdf',
+                  url:AppLinks.academiaDoFlutterDartWeek2023,
                 ),
                 _buildCourseItem(
                   course: "Dart e Flutter",
@@ -217,8 +216,7 @@ class ExperiencePage extends StatelessWidget {
                   course: "Programador Java",
                   institution: "SENAC-RN",
                   year: "2017",
-                  url:
-                      'https://file.notion.so/f/f/a3adf51a-bad3-4c29-890a-100bf6e25e65/22ae227f-fb2b-4492-9864-95600e17d343/Programador_Java.pdf?table=block&id=1b2e2e57-f164-80d9-92a1-e0594cb5a637&spaceId=a3adf51a-bad3-4c29-890a-100bf6e25e65&expirationTimestamp=1742940000000&signature=TvDQkze6SnLLB95zd1THbEyL_shRVqLBwiU63_TPByQ&downloadName=Programador+Java.pdf',
+                  url:AppLinks.senacDevelopedJava,
                 ),
                 SizedBox(height: 24),
 

@@ -15,8 +15,7 @@ jobs:
     - name: Configure o Flutter
       uses: subosito/flutter-action@v2
       with:
-        flutter-version: '3.29.2'  # substitua pela versão do seu projeto, se quiser
-
+        flutter-version: '3.29.2'  
     - name: Pub get
       run: flutter pub get
 
@@ -29,7 +28,7 @@ jobs:
         external_repository: luizzlcs/netlify_portfolio_tech
         personal_token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
         publish_dir: ./build/web
-        publish_branch: master  # aqui você coloca a branch do seu repositório web
+        publish_branch: master  
         user_name: github-actions[bot]
         user_email: github-actions[bot]@users.noreply.github.com
         # Se for um repositório separado, use:

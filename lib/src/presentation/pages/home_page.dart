@@ -103,7 +103,7 @@ class HomeContent extends StatelessWidget {
                       child: CircleAvatar(
                         radius: 120,
                         backgroundColor: Color.fromARGB(255, 255, 193, 7),
-                        backgroundImage: AssetImage(AppImage.imageProfile),
+                        backgroundImage: AssetImage(AppImage.perfil),
                       ),
                     ),
                   ],
