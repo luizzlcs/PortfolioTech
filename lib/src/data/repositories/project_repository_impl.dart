@@ -8,6 +8,24 @@ class ProjectRepositoryImpl implements ProjectRepository {
     // await Future.delayed(Duration(seconds: 1)); 
     return [
       Project(
+        name: "Página de vendas SendMessage - HTML e CSS",
+        description:
+            'Landing page comercial com seções estratégicas (benefícios, demonstração, depoimentos, CTA) usando tags semânticas (<section>, <header>, <footer>) para SEO e acessibilidade.',
+        type: "Front-end",
+        imageUrl: AppImage.sendMessageSales,
+        siteUrl: "https://salessendmessage.netlify.app/",
+        githubUrl: "https://github.com/luizzlcs/netlify_sales_page_send_message",
+      ),
+      Project(
+        name: "Documentação SendMessage - HTML e CSS",
+        description:
+            'Cria uma documentação interativa para o "Send Message to WhatsApp", com navegação por sidebar, seções organizadas em cards e elementos semânticos (como <section> e <main>) para melhor acessibilidade e SEO.',
+        type: "Front-end",
+        imageUrl: AppImage.sendMessage,
+        siteUrl: "https://senddoc.netlify.app/",
+        githubUrl: "https://github.com/luizzlcs/netlify_SendMessage",
+      ),
+      Project(
         name: "DSCommerce - Java",
         description:
             "Oferece recursos como Autenticação e segurança: Utilizando OAuth2, Resource Server, JWT e BCrypt, garantindo um ambiente seguro para todos os usuários, produtos e categorias, além de processamento de pedidos, integrando bancos de dados H2.",

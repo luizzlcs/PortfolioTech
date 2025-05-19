@@ -8,5 +8,6 @@ abstract class AppLinks {
   static const String academiaDoFlutterDartWeek2023 = 'https://firebasestorage.googleapis.com/v0/b/seven-manager-cffc7.appspot.com/o/Documentos%2FCertificadoDartWeek11.pdf?alt=media&token=9e5eaa26-9d7c-4032-b62e-8a6a2a9fe69f';
   static const String devSuperiorJavaSpringProfessional = 'https://devsuperior.club/c/5-5711';
   static const String flutterMasterClass = 'https://ll-app-certificates.s3.sa-east-1.amazonaws.com/89685a45-ad9c-47ab-86e8-31b9bd4bd70d.png';
+  static const String sendMessageDoc = 'https://senddoc.netlify.app/';
  
 }

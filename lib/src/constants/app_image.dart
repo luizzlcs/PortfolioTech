@@ -18,5 +18,7 @@ abstract class AppImage{
   static const String perfil_01 = 'assets/images/perfil_01.png';
   static const String perfil_02 = 'assets/images/perfil_02.png';
   static const String perfil_03 = 'assets/images/perfil_03.png';
+  static const String sendMessage = 'assets/images/SendMessage.png';
+  static const String sendMessageSales = 'assets/images/SendMessageSales.png';
 
 }
