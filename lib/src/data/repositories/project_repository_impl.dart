@@ -8,6 +8,15 @@ class ProjectRepositoryImpl implements ProjectRepository {
     // await Future.delayed(Duration(seconds: 1)); 
     return [
       Project(
+        name: "Criptografador AES com Senha - HTML e CSS",
+        description:
+            'Ferramenta online de criptografia AES com senha, desenvolvida em HTML, CSS e JavaScript. Permite proteger textos, com recursos de copiar resultado e visualizar a senha. Possui design moderno, responsivo e seguro, funcionando diretamente no navegador.',
+        type: "Front-end",
+        imageUrl: AppImage.codificadorAes,
+        siteUrl: "https://cofredesenhas.netlify.app/",
+        githubUrl: "https://github.com/luizzlcs/netlifyCodificador",
+      ),
+      Project(
         name: "Página de vendas SendMessage - HTML e CSS",
         description:
             'Landing page comercial com seções estratégicas (benefícios, demonstração, depoimentos, CTA) usando tags semânticas (<section>, <header>, <footer>) para SEO e acessibilidade.',
