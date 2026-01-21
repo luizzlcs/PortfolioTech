@@ -8,6 +8,15 @@ class ProjectRepositoryImpl implements ProjectRepository {
     // await Future.delayed(Duration(seconds: 1)); 
     return [
       Project(
+        name: "Feed Social - Flutter",
+        description:
+            "Projeto desenvolvido para vaga de Desenvolvedor Flutter Mobile em solicitação da empresa ESIG Group. Um aplicativo de rede social moderno desenvolvido com Flutter, utilizando Clean Architecture e Firebase como backend. O app permite aos usuários criar, compartilhar e interagir com posts, incluindo funcionalidades de câmera, galeria e autenticação.",
+        type: "Mobile",
+        imageUrl: AppImage.socialFeed,
+        siteUrl: "https://esigfeed.netlify.app",
+        githubUrl: "https://github.com/luizzlcs/social_feed_app",
+      ),
+      Project(
         name: "Criptografador AES com Senha - HTML e CSS",
         description:
             'Ferramenta online de criptografia AES com senha, desenvolvida em HTML, CSS e JavaScript. Permite proteger textos, com recursos de copiar resultado e visualizar a senha. Possui design moderno, responsivo e seguro, funcionando diretamente no navegador.',

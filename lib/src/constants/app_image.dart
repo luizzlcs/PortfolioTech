@@ -21,5 +21,6 @@ abstract class AppImage{
   static const String sendMessage = 'assets/images/SendMessage.png';
   static const String sendMessageSales = 'assets/images/SendMessageSales.png';
   static const String codificadorAes = 'assets/images/codificadorAes.png';
+  static const String socialFeed = 'assets/images/socialFeed.png';
 
 }
